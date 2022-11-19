@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil de {{student.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card >
+    <img [src]="student.photo"/>
+    <ion-card-header>
+        <ion-label>NC: {{student.controlnumber}}</ion-label>
+        <ion-label>Carrera: {{student.career}}</ion-label>
+      <ion-label> Correo: {{student.email}}</ion-label>
+    </ion-card-header>
+    <ion-card-content>
+      <h2>Curp: {{student.curp}}</h2>
+      <h2>Edad: {{student.age}} años</h2>
+    </ion-card-content>
+    <ion-button (click)="editStudent(student.controlnumber)">Actualizar</ion-button>
+  </ion-card>
+</ion-content>
